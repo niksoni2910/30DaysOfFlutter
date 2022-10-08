@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class homepage extends StatelessWidget {
+class Homepage extends StatelessWidget {
   int day = 30;
   String name = "development";
   @override
