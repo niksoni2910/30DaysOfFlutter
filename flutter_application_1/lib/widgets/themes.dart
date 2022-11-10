@@ -29,7 +29,7 @@ class MyTheme {
         elevation: 0.0,
         iconTheme: const IconThemeData(color: Colors.white),
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
-        titleTextStyle: Theme.of(context).textTheme.headline6,
+        titleTextStyle: Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
       ));
 
   static Color creamColor = Color(0xfff5f5f5);
