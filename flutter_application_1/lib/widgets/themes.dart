@@ -32,8 +32,8 @@ class MyTheme {
         titleTextStyle: Theme.of(context).textTheme.headline6?.copyWith(color: Colors.white),
       ));
 
-  static Color creamColor = Color(0xfff5f5f5);
+  static Color creamColor = const Color(0xfff5f5f5);
   static Color darkcreamColor = Vx.gray900;
-  static Color darkBluishColor = Color(0xfff403b58);
+  static Color darkBluishColor = const Color(0xfff403b58);
   static Color lightBluishColor = Vx.indigo500;
 }
