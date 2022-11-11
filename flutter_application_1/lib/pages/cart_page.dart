@@ -32,9 +32,14 @@ class _CardTotal extends StatelessWidget {
           "\$9999".text.xl5.color(context.theme.accentColor).make(),
           30.widthBox,
           ElevatedButton(
-          onPressed: (() {}),
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.buttonColor)),
-          child:"Buy".text.white.make()).w32(context)
+                  onPressed: (() {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: "Buying not supported yet".text.make()));}),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(context.theme.buttonColor)),
+                  child: "Buy".text.white.make())
+              .w32(context)
         ],
       ),
     );
@@ -42,7 +47,6 @@ class _CardTotal extends StatelessWidget {
 }
 
 class _CartList extends StatefulWidget {
-
   @override
   State<_CartList> createState() => __CartListState();
 }
@@ -54,7 +58,9 @@ class __CartListState extends State<_CartList> {
       itemCount: 5,
       itemBuilder: (context, index) => ListTile(
         leading: const Icon(Icons.done),
-        trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.remove_circle_outline)),
+        trailing: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.remove_circle_outline)),
         title: "Item 1".text.make(),
       ),
     );
